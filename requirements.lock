@@ -1,0 +1,13 @@
+cffi==1.11.5
+imageio==2.4.1
+imutils==0.5.1
+numpy==1.15.2
+opencv-python==3.4.3.18
+picamera==1.13
+Pillow==5.3.0
+pycparser==2.19
+pyserial==3.4
+rpi-ws281x==4.0.0
+smbus-cffi==0.5.1
+spidev==3.2
+PyYAML==3.13

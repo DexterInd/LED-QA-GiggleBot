@@ -1,0 +1,45 @@
+{
+    "camera" : {
+        "iso": 100,
+        "shutter_speed": 3000,
+        "preview_alpha": 64,
+        "resolution": [480, 272],
+        "sensor_mode": 1,
+        "rotation": 0,
+        "framerate": 40,
+        "brightness": 50,
+        "awb_mode": "off",
+        "awb_gains": 1.5
+    },
+    "qa" : {
+        "color-boundaries": [
+            ["red", [0, 165, 128], [15, 255, 255]],
+            ["red", [165, 165, 128], [179, 255, 255]],
+            ["green", [35, 165, 128], [75, 255, 255]],
+            ["blue", [90, 165, 128], [133, 255, 255]]
+        ],
+        "leds": 9,
+        "acceptable-leading-color-ratio": 0.95,
+        "acceptable-ratio-between-most-popular-colors": 0.05,
+        "gaussian-blur": [5,5],
+        "binary-threshold": 200,
+        "minimum-circle-lines": 5,
+        "maximum-circle-lines": 45,
+        "minimum-circle-size": 85,
+        "scale-2nd-circle": 1.7
+    },
+    "led-switcher": {
+        "color-codes": [
+            [[255, 0, 0], [255, 0, 0], [255, 0, 0], [255, 0, 0], [255, 0, 0], [255, 0, 0], [255, 0, 0], [255, 0, 0], [255, 0, 0]],
+            [[0, 255, 0], [0, 255, 0], [0, 255, 0], [0, 255, 0], [0, 255, 0], [0, 255, 0], [0, 255, 0], [0, 255, 0], [0, 255, 0]], 
+            [[0, 0, 255], [0, 0, 255], [0, 0, 255], [0, 0, 255], [0, 0, 255], [0, 0, 255], [0, 0, 255], [0, 0, 255], [0, 0, 255]]],
+        "color-names": ["red", "green", "blue"],
+        "gpio-port": 12
+    },
+    "program": {
+        "gopigo3-button": "AD1",
+        "time-to-run": 60,
+        "save-frames": false,
+        "frames-dir": "./data/test/"
+    }
+}
