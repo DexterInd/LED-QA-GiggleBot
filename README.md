@@ -1,5 +1,7 @@
 [![Alt text](static/gb_jig.JPG)](https://www.youtube.com/watch?v=0oBJICabVl4)
 
+### This Repository Is a Mirror of a Folder On the Private Repo github.com/DexterInd/GiggleBotDev
+
 ## What Is This
 
 This project is used for running QA tests on the GiggleBot board in China.
