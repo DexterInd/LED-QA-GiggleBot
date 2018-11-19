@@ -296,12 +296,13 @@ def main(manager, sync_manager, kill_event):
     robot.set_led(robot.LED_WIFI, 0, 255, 0)
 
     # do it indefinitely until a signal is caught
+    testId = 0
     while not kill_event.is_set():
         sleep(0.5)
 
         # if the button is pressed, then a QA test is started
         if button.read() == PRESSED:
-            logger.info('start qa test')
+            logger.info('start qa test w/ ID=' + str(testId))
             
             if save_frames is True:
                 try:
@@ -360,10 +361,11 @@ def main(manager, sync_manager, kill_event):
             # conclude the test by setting the appropriate color
             if failed is True:
                 led_player.play('solid', RED)
-                logger.info('qa test failed')
+                logger.info('qa test #' + str(testId) + ' failed')
             else:
                 led_player.play('solid', GREEN)
-                logger.info('qa test succeeded')
+                logger.info('qa test #' + str(testId) + ' succeeded')
+            testId += 1
 
             # wait a little to be sure the rest of the validating processes
             # have finished processing their remaining frames (even though the queue is emptied)
