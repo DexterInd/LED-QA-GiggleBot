@@ -411,8 +411,13 @@ class GiggleBotQAValidation(Thread):
             return
         
         pixels = list(color_dist.values())
-        primary_no_pixels = color_dist[metadata['leds']]
+        primary_no_pixels = color_dist[metadata['leds']] + 1
         total_pixels = sum(pixels)
+        
+        if total_pixels <= 100:
+            self.failed_qa = True
+            self._logger.warn('failed because under 100 pixels have been detected')
+            return
         
         if primary_no_pixels / total_pixels <= self._acceptable_leading_color_ratio:
             self.failed_qa = True
