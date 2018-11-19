@@ -5,8 +5,8 @@ WORKDIR /build
 RUN apt-get update -qq && \
      apt-get install git -y --no-install-recommends
 
-RUN git clone --depth=1 https://github.com/DexterInd/GoPiGo3 && \
-    git clone --depth=1 https://github.com/DexterInd/RFR_Tools
+RUN git clone https://github.com/DexterInd/GoPiGo3 && \
+    git clone https://github.com/DexterInd/RFR_Tools
 
 WORKDIR /build/GoPiGo3
 RUN git reset --hard 5849047558aa1e573b49dc572adec44d9960084c
