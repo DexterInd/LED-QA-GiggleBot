@@ -365,6 +365,7 @@ class GiggleBotQAValidation(Thread):
                         self._do_qa_on_frame(frame, metadata)
                     except Exception as msg:
                         self._logger.error(str(msg), exc_info = 1)
+                        self.failed_qa = True
             except Empty:
                 if self._stop_when_empty is True and self._procq.qsize() == 0:
                     self._logger.warn('queue empty; ending the operation')
