@@ -38,7 +38,7 @@
     },
     "program": {
         "gopigo3-button": "AD1",
-        "time-to-run": 60,
+        "time-to-run": 30,
         "save-frames": false,
         "frames-dir": "./data/test/"
     }

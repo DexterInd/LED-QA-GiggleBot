@@ -78,7 +78,7 @@ Upon launching the program, keep in mind that the WiFi LED turns <span style="co
 ### Docker Style
 
 ```bash
-docker container run -it --rm --name --privileged robertlucian/gbtest
+docker container run -it --rm --name gbtest --privileged robertlucian/gbtest
 ```
 To stop it, just stop the container or press CTRL-C if in interactive mode.
 The container is on [hub.docker.com](https://hub.docker.com/r/robertlucian/gbtest/).

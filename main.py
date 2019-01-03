@@ -334,6 +334,7 @@ def main(manager, sync_manager, kill_event):
                     break
                 else:
                     sleep(0.05)
+            end_time = time() - start
 
             # stop the script if a signal is caught
             if stop_event is True:
@@ -361,10 +362,10 @@ def main(manager, sync_manager, kill_event):
             # conclude the test by setting the appropriate color
             if failed is True:
                 led_player.play('solid', RED)
-                logger.info('qa test #' + str(testId) + ' failed')
+                logger.info('qa test #' + str(testId) + ' failed after ' + str(int(end_time)) + ' seconds')
             else:
                 led_player.play('solid', GREEN)
-                logger.info('qa test #' + str(testId) + ' succeeded')
+                logger.info('qa test #' + str(testId) + ' succeeded after ' + str(int(end_time)) + ' seconds')
             testId += 1
 
             # wait a little to be sure the rest of the validating processes
