@@ -6,7 +6,7 @@
 
 This project is used for running QA tests on the GiggleBot board in China.
 It's aimed at determining if the 9 LEDs on the board change their color or 
-suddenly stop working during the testing phase.
+suddenly stop working during the testing phase. More onto how this project has been developed can be found out in this [article](https://www.robertlucian.com/2018/11/02/qa-led-gigglebot/).
 
 To put it in a step-by-step process, this is what the testing phase looks like:
 1. Place the GiggleBot in the test jig.
